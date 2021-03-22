@@ -1,0 +1,181 @@
+body{
+  background-color: white;
+  font-size: 18px;
+  margin: 0;
+  font-family: "Garamond"
+}
+
+
+nav li{
+  text-align: center;
+  padding: 10px 15px;
+  text-transform: uppercase;
+}
+
+.logo{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+
+.header{
+  padding: 25px;
+  position: relative;
+  align-items: center;
+
+}
+
+.about-image{
+    position: relative;
+}
+
+.about-image h1 {
+    left: 0;
+    text-align:center;
+    top: 30px;
+    width: 100%;
+    font-size: 40px;
+}
+
+.quote{
+    height: 300px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.quote p{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.quote p1{
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.about-text{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: black;
+    color: white;
+}
+
+.about-text h1{
+  font-size: 40px;
+  text-align: center;
+}
+
+.about-text p{
+ padding-top: 20px;
+}
+
+#main h1{
+  text-align: center;
+  font-size:40px;
+}
+
+footer{
+  padding-top: 30px;
+  text-align: center;
+  font-family: "Garamond";
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: lavender;
+
+
+}
+
+/* art css */
+
+.gallery{
+display: grid;
+grid-gap: 20px;
+grid-template-columns: auto;
+grid-template-rows: auto auto ;
+
+}
+
+#header-art h1{
+  text-align: center;
+  font-size: 40px;
+  padding-top: 20px;
+}
+div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+img {
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.art-text p{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+}
+
+/* fun facts css */
+
+ul{
+  list-style-type: none;
+}
+
+.funfact h1{
+  padding-top: 50px;
+  padding-bottom: 20px;
+
+}
+
+.funfact p{
+  padding-bottom: 10px;
+}
+
+/* contact form css */
+
+#header-contact{
+  text-align: center;
+  font-size: 40px;
+  padding-top: 20px;
+
+}
+
+.form{
+  width: 50%;
+  margin: auto;
+  margin-bottom: 50px;
+  padding-top: 50px;
+}
+
+.entry{
+  border: solid black 1px;
+  margin: 10px auto;
+  font-family: "Garamond";
+  text-align: center; 
+  border-radius: .5em;
+}
+
+.submit{
+  border-radius: .5em;
+  font-family: "Lora";
+  font-size: 1em;
+  padding: 10px;
+  text-transform: uppercase;
+  width: 150px;
+  color: white;
+  background-color: black;
+
+}
+
