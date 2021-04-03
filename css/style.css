@@ -5,8 +5,24 @@ body{
   font-family: "Garamond"
 }
 
+.skip a{
+	background: white;
+	left: 0;
+	padding: 10px;
+	position: absolute; 
+	top: -30px;   
+	z-index: 1;
+}
+
+.skip a:focus {
+  top: 0px;
+}
+
+
 .logo a{
   text-decoration: none;
+  color: black;
+
 }
 
 
@@ -19,6 +35,13 @@ nav li {
 
 nav a{
   text-decoration: none;
+  color: black;
+
+}
+
+.active{
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 .logo{
@@ -59,11 +82,11 @@ nav a{
 }
 
 .quote{
-    height: 300px;
     padding-top: 50px;
     padding-bottom: 50px;
     padding-left: 10px;
     padding-right: 10px;
+    font-weight: bold;
 }
 
 .quote p{
@@ -104,12 +127,11 @@ footer{
 
 /* art css */
 
-.gallery{
+.container{
 display: grid;
 grid-gap: 20px;
-grid-template-columns: auto;
-grid-template-rows: auto auto ;
-
+grid-template-columns: 1fr 1fr;
+grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
 }
 
 div img{
@@ -133,27 +155,36 @@ img {
 
 /* fun facts css */
 
+.funfact{
+  
+}
+
 ul{
   list-style-type: none;
 }
 
 .funfact h1{
-  padding-top: 50px;
+  padding-top: 35px;
   padding-bottom: 20px;
+  font-size: 40px;
+  text-align: center;
+  color: grey;
 
 }
 
 .funfact p{
   padding-bottom: 10px;
+  text-align: center;
 }
 
 /* contact form css */
 
 .form{
-  width: 50%;
   margin: auto;
   margin-bottom: 50px;
   padding-top: 50px;
+  display: flex;
+  flex-direction: column
 }
 
 .entry{
@@ -173,5 +204,135 @@ ul{
   width: 150px;
   color: white;
   background-color: black;
+  text-align: center;
+
+}
+
+.artists{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  padding: 30px;
+}
+.artists img{
+  padding: 10px;
+  width: 100px;
+  height: 400px;
+}
+
+.artists h1{
+  text-align: center;
+}
+.artists h2{
+  text-align: center;
+}
+.artists p{
+  text-align: center;
+  padding: 20px;
+}
+
+
+@media (min-width: 600px){
+
+#navigation  {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto auto;
+}
+
+.about-image{
+  background-size: 100%;
+  background-color: black;
+}
+
+.about-image img{
+  display: block;
+  width: 500px;
+  height: auto;
+  margin: auto;
+}
+
+@media (min-width: 1020px){
+  .flipcard{
+    justify-content: center;
+    padding-left: 70px;
+    background-color: transparent;
+    width: 500px;
+    height: 400px;
+    perspective: 1000px;
+  }
+  
+  .inner {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flipcard h1 {
+    font-size: 30px;
+    padding: 15px;
+  }
+  
+  .flipcard p {
+    text-align: left;
+  }
+  .flipcard:hover .inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flipcard:focus .inner {
+    transform: rotateY(180deg);
+      
+  }
+  
+  .front, .back {
+    position: absolute;
+    max-width: 500px;
+    max-height: 400px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .front {
+    color: black;
+  
+    z-index: 2;
+    -webkit-transform: rotateY(0deg);
+           transform: rotateY(0deg);
+  }
+  
+  .front img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+  
+  .back {
+    background-color: black;
+    color: white;
+    transform: rotateY(180deg);
+  
+     -webkit-transform: rotateY(-180deg);
+          ransform: rotateY(-180deg);
+  }
+  
+}
 
 }
