@@ -42,6 +42,7 @@ nav a{
 .active{
   text-decoration: underline;
   font-weight: bold;
+  font-size: 22px
 }
 
 .logo{
@@ -155,15 +156,7 @@ img {
 
 /* fun facts css */
 
-.funfact{
-  
-}
-
-ul{
-  list-style-type: none;
-}
-
-.funfact h1{
+ol h1{
   padding-top: 35px;
   padding-bottom: 20px;
   font-size: 40px;
@@ -209,9 +202,6 @@ ul{
 }
 
 .artists{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
   padding: 30px;
 }
 .artists img{
@@ -246,6 +236,12 @@ ul{
   grid-template-rows: auto auto auto auto auto auto;
 }
 
+.artists{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+}
+
 .about-image{
   background-size: 100%;
   background-color: black;
@@ -260,11 +256,12 @@ ul{
 
 @media (min-width: 1020px){
   .flipcard{
+    display: block;
     justify-content: center;
     padding-left: 70px;
     background-color: transparent;
-    width: 500px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     perspective: 1000px;
   }
   
@@ -273,7 +270,7 @@ ul{
     width: 100%;
     height: 100%;
     text-align: center;
-    transition: transform 0.8s;
+    transition: transform 0.6s;
     transform-style: preserve-3d;
   }
   
@@ -305,9 +302,6 @@ ul{
     transition: 0.6s;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    position: absolute;
-    top: 0;
-    left: 0;
   }
   
   .front {
@@ -315,13 +309,13 @@ ul{
   
     z-index: 2;
     -webkit-transform: rotateY(0deg);
-           transform: rotateY(0deg);
+    transform: rotateY(0deg);
   }
   
   .front img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      width: 250px;
+      height: 250px;
+      object-fit: contain;
   }
   
   .back {
@@ -332,7 +326,59 @@ ul{
      -webkit-transform: rotateY(-180deg);
           ransform: rotateY(-180deg);
   }
+
+  .gallery img:hover{
+    opacity: 50%;
+  }
+
+  .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto; 
+  }
+
+  .logo {
+    text-align: left;
+    padding: 20px;
+  }
   
+  #navigation  {
+    justify-content: flex-end;
+    align-content: center;
+  }  
+
+  ol{
+    list-style-position: inside;
+    list-style-type: upper-roman
+  }
+
+  ol {
+  padding-top: 35px;
+  padding-bottom: 20px;
+  font-size: 40px;
+  text-align: center;
+  color: orange;
 }
 
+ol h1{
+  color: red;
+}
+
+
+ol p{
+  padding-bottom: 40px;
+  text-align: center;
+  color: black;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto; 
+      /* removes animation? */
+  }
 }
